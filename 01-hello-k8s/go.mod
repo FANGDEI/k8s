@@ -1,0 +1,3 @@
+module 01-hello-k8s
+
+go 1.18
