@@ -3,4 +3,5 @@ go 1.18
 use (
     ./01-hello-k8s/
     ./02-pod-k8s/
+    ./03-deployment-k8s/
 )
