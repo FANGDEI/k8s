@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Pod # 创建的资源类型
+metadata:
+  name: nginx-pod # metadata.name 创建的 Pod 名字, 名字唯一
+spec:
+  containers: # spec.containers 要运行的容器名称和镜像名称 镜像默认来源 DockerHub
+    - name: nginx-container
+      image: nginx
