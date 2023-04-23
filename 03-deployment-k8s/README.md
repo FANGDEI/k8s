@@ -5,6 +5,12 @@
 
 ## Rolling Update
 通过`滚动更新`来确保新版本未`ready`之前，先不删除旧版本的`Pod`
+```bash
+# 版本回滚和历史版本查看
+kubectl rollout undo deployment hellok8s-deployment
+kubectl rollout history deployment hellok8s-deployment
+kubectl rollout undo deployment/hellok8s-deployment --to-revision=2
+```
 ![](https://camo.githubusercontent.com/526eeefe7af67cd567486657693e9acac102f726f5b69427b3796bd0c3ff17be/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f6775616e677a68656e676c692f50696355524c406d61737465722f755069632f726f6c6c696e677570646174652e706e67)
 
 ## livenessProb
