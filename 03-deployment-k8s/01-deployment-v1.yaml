@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hellok8s-deployment
+spec:
+  replicas: 3 # 部署的 Pod 副本数量 当 Pod 数量不够时会自动创建新的 Pod
+  selector: # Deployment 和 Pod 关联的方式
+    matchLabels:
+      app: hellok8s
+  template:
+    metadata:
+      labels:
+        app: hellok8s
+    spec:
+      containers:
+        - image: fangdei/hellok8s:v1
+          name: hellok8s-container
