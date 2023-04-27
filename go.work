@@ -4,4 +4,5 @@ use (
     ./01-hello-k8s/
     ./02-pod-k8s/
     ./03-deployment-k8s/
+    ./04-service-k8s/
 )
