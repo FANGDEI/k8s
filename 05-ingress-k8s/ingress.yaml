@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: hello-ingress
+spec:
+  rules:
+  - host: hellok8s.fangdei.com
+    http:
+      paths:
+      - path: /hello
+        backend:
+          serviceName: service-hellok8s-clusterip
+          servicePort: 3000
+  - host: nginx.fangdei.com
+    http:
+        paths:
+          - path: /
+            backend:
+              serviceName: service-nginx-clusterip
+              servicePort: 4000
